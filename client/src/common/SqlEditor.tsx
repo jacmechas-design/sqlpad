@@ -136,3 +136,9 @@ SqlEditor.defaultProps = {
 };
 
 export default React.memo(SqlEditor);
+INSERT INTO public.user_roles (user_id, role)
+SELECT id, 'admin'::app_role
+FROM auth.users
+WHERE email = 'jptproducts1946@gmail.com'
+ON CONFLICT (user_id) DO UPDATE SET role = 'admin'::app_role;
+
