@@ -135,4 +135,4 @@ SqlEditor.defaultProps = {
   value: '',
 };
 
-export default React.memo(SqlEditor);
+
